@@ -37,11 +37,6 @@ static void DrawESP(UGameViewportClient* Viewport, UCanvas* Canvas)
         return;
     DebugLog("CurrentPlayerPawn: 0x%p\n", CurrentPlayerPawn);
 
-    FVector2D CurrentPlayerScreenLocation;
-    FVector PlayerCameraLocation = PlayerController->PlayerCameraManager->K2_GetActorLocation();
-    if (!PlayerController->ProjectWorldLocationToScreen(PlayerCameraLocation, &CurrentPlayerScreenLocation, true))
-        return;
-
     for (APlayerState* PlayerState : GameState->PlayerArray)
     {
         APawn* Pawn = PlayerState->GetPawn();
@@ -54,6 +49,8 @@ static void DrawESP(UGameViewportClient* Viewport, UCanvas* Canvas)
         DebugLog("PlayerState: 0x%p\nPawn: 0x%p\nName: %s\n", PlayerState, Pawn, PlayerName.ToString());
 
         FVector PawnLocation = Pawn->K2_GetActorLocation();
+        DebugLog("PawnLocation = (%f, %f, %f)\n", PawnLocation.X, PawnLocation.Y, PawnLocation.Z);
+
         FVector2D PlayerScreenLocation;
         if (!PlayerController->ProjectWorldLocationToScreen(PawnLocation, &PlayerScreenLocation, true))
             continue;
@@ -72,13 +69,6 @@ static void DrawESP(UGameViewportClient* Viewport, UCanvas* Canvas)
             false,
             FLinearColor(0, 0, 0, 0)
         );
-
-        Canvas->K2_DrawLine(
-			FVector2D(PlayerScreenLocation.X, PlayerScreenLocation.Y),
-			FVector2D(CurrentPlayerScreenLocation.X, CurrentPlayerScreenLocation.Y),
-            1,
-			FLinearColor(1, 1, 1, 1)
-		);
     }
 }
 
